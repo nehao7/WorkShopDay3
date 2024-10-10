@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -13,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="My Location"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -20,23 +20,24 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="Latitude"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/tvLatitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:gravity="center"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
             android:text="0"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -46,22 +47,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:gravity="center"
+            android:textColor="@color/black"
             android:text="Longitude"
             android:textSize="20sp"
             android:textStyle="bold" />
-
         <TextView
             android:id="@+id/tvLongitude"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:gravity="center"
             android:text="0"
             android:textSize="16sp"
             android:textStyle="bold" />
@@ -72,6 +73,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="Current Location"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -80,12 +82,7 @@
         android:id="@+id/progress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/tvlocation"
@@ -93,9 +90,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="center"
+        android:textColor="@color/black"
         android:text="Location"
         android:textSize="25sp"
         android:textStyle="bold" />
-
 
 </LinearLayout>

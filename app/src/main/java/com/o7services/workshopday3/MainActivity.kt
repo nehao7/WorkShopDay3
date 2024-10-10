@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
         startActivity(Intent(this,LocationActivity::class.java))
             finish()
-
         }, 5000)
     }
 }
