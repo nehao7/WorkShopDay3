@@ -1,11 +1,13 @@
 package com.o7services.workshopday3
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
@@ -24,6 +26,7 @@ class LocationActivity : AppCompatActivity() {
     var tvlocation:TextView?=null
     var tvlat:TextView?=null
     var tvlong:TextView?=null
+    var btnSensor:Button?=null
     var pgbar:ProgressBar?=null
     private val LOCATION_PERMISSION_REQUEST_CODE = 1000
     private lateinit var fusedLocationClient: FusedLocationProviderClient
@@ -41,6 +44,7 @@ class LocationActivity : AppCompatActivity() {
         tvlocation=findViewById(R.id.tvlocation)
         tvlat=findViewById(R.id.tvLatitude)
         tvlong=findViewById(R.id.tvLongitude)
+        btnSensor=findViewById(R.id.btnSensor)
         pgbar=findViewById(R.id.progress)
 
         if (checkPermissions()) {
@@ -49,6 +53,9 @@ class LocationActivity : AppCompatActivity() {
         } else {
           //  binding.progress.visibility = View.GONE
             requestPermissions()
+        }
+        btnSensor?.setOnClickListener {
+            startActivity(Intent(this,SensorActivity::class.java))
         }
     }
 
